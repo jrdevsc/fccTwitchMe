@@ -1,0 +1,68 @@
+h1{
+  font-family: 'Kumar One', cursive;
+}
+
+h2,
+h3,
+h4,
+p,
+a,
+li,
+label{
+  font-family: 'Baloo Paaji', cursive;
+  text-align: center;
+}
+
+h2{
+  color: #fff;
+  text-decoration: underline;
+}
+
+.sresults{
+  color: #000;
+}
+
+body{
+  background-color: #4E1B59;
+}
+
+a{
+  color: #4E1B59;
+}
+
+/*jumbotron*/
+
+.jumbotron{
+  background: rgba(255, 135, 39, .8) !important;
+}
+
+.jumbotron h1{
+  color: #fff;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, .7);
+}
+
+.jumbotron h2 {
+  color: #fff;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, .7);
+}
+
+/*well styles*/
+.thumbnail{
+  background: rgba(255, 255, 255, .5) !important;
+  border: none;
+  box-shadow: 4px 4px 5px rgba(255, 255, 255, .8);
+}
+
+/*prepop list*/
+.media-object{
+  height: 100px;
+  widght: 100px;
+}
+
+.notstreaming{
+  border-right: 4px solid red;
+}
+
+.stream{
+  border-right: 4px solid green;
+}
