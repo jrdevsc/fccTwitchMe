@@ -1,7 +1,8 @@
 // "comster404", "brunofin",
 
 
-
+//pretty sure all user stories from FCC are working
+//im going to leave this like this now, come back and refactor 
 
 var bUrl = "https://wind-bow.gomix.me/twitch-api";
 
@@ -62,12 +63,11 @@ $('#searchForm').on('submit', function(e){
         $.ajax({
           url: bUrl+"/streams/"+srData.name,
           success: function(ckData){
-            // console.log(ckData);
             if(ckData.stream == null){
-              $('#streamYN').text('Nope');
+              $('#streamYN').text(srData.name+ " is not streaming.");
             }else{
               console.log(srData);
-              $('#streamYN').text(srData.status);
+              $('#streamYN').text(srData.game);
             }
           }
         });
@@ -75,4 +75,5 @@ $('#searchForm').on('submit', function(e){
       }
     }
   });
+
 });
