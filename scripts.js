@@ -9,7 +9,9 @@ users.forEach(function(user){
   $.ajax({
     url: bUrl+"/streams/"+user,
     success: function(sData){
+
       if(sData.stream !== null){
+        // console.log(sData);
         //do another ajax for this users
         $.ajax({
           url: bUrl+"/users/"+user,
@@ -21,7 +23,7 @@ users.forEach(function(user){
               var bio = uData.bio;
             }
 
-            $('#prePop').append(`<div id='${uData.name}' class='media'><div class='media-left'><a href='#'><img class='media-object' src='${uData.logo}'></a></div><div class='media-body'><h3 class='media-heading'>${uData.name}</h3><p>${bio}</p><p>Currently Streaming: <em>${sData.stream.game}</em></p><a href='https://www.twitch.tv/${user}' class="btn btn-info">More</a></div></div>`);
+            $('#prePop').append(`<div id='${uData.name}' class='media'><div class='media-left'><a href='#'><img class='media-object' src='${uData.logo}'></a></div><div class='media-body'><h3 class='media-heading'>${uData.name}</h3><p>${bio}</p><p>Currently Streaming: <em>${sData.stream.game}</em></p><a href='https://www.twitch.tv/${user}' class="btn btn-info">View Stream</a></div></div>`);
           }
         });
       }else{
@@ -43,7 +45,6 @@ $('#searchForm').on('submit', function(e){
   $.ajax({
     url: bUrl+"/channels/"+search,
     success: function(srData){
-      // console.log(srData);
       if(srData.error){
         alert(srData.error);
       }else{

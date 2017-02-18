@@ -8,7 +8,8 @@ h4,
 p,
 a,
 li,
-label{
+label,
+button{
   font-family: 'Baloo Paaji', cursive;
   text-align: center;
 }
@@ -65,4 +66,14 @@ a{
 
 .stream{
   border-right: 4px solid green;
+}
+
+.btn-info{
+  background: rgba(255, 135, 39, 1) !important;
+  border: none;
+}
+
+.btn-info:hover{
+  background: rgba(255, 135, 39, .3) !important;
+  color: #4E1B59;
 }
